@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Insert product here</title>
+</head>
+<body>
+	<div>
+		<h3>Product Insertion Form</h3>
+
+		<form th:action="@{/add}" th:object="${productJSON}" method="post">
+
+			<div>
+				<label>Product Barcode</label> <input type="text"
+					th:field="*{productBarcode}" />
+			</div>
+
+			<div>
+				<label>Product Name</label> <input type="text"
+					th:field="*{productName}" />
+			</div>
+
+			<div>
+				<label>Product Weight</label> <input type="text"
+					th:field="*{productWeight}" />
+			</div>
+
+			<div>
+				<label>Product Image Address</label> <input type="url"
+					th:field="*{productImageUrl}" />
+			</div>
+
+			<div>
+				<label>Category Name</label> <input type="text"
+					th:field="*{categoryName}" />
+			</div>
+
+			<div>
+				<label>Manufacture Name</label> <input type="text"
+					th:field="*{manufactureName}" />
+			</div>
+
+			<div>
+				<label>Manufacture Address</label> <input type="text"
+					th:field="*{manufactureAddress}" />
+			</div>
+
+			<div>
+				<label>Store Name</label> <input type="text" th:field="*{storeName}" />
+			</div>
+
+			<div>
+				<label>Store Location</label> <input type="text"
+					th:field="*{storeLocation}" />
+			</div>
+
+			<div>
+				<label>Product Price</label> <input type="text" th:field="*{price}" />
+			</div>
+
+			<div>
+				<label>Product Quantity</label> <input type="number"
+					th:field="*{quantity}" />
+			</div>
+
+			<div>
+				<button type="submit">Submit</button>
+			</div>
+
+		</form>
+	</div>
+</body>
+</html>
